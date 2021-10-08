@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+}
+
+a {
+  color:#333;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.readmore {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.readmore a {
+  padding-bottom: 1px;
+  color: #333;
+  position: relative;
+}
+
+.readmore a::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #333;
+  transition: all 200ms ease;
+}
+.readmore a:hover::after {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+.header {
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  width: 100%;
+}
+
+.header .site_title{
+  line-height: 1px;
+  text-align: left;
+  padding: 20px 16px 20px 0;
+}
+
+.header .site_title a{
+  display: inline-block;
+}
+
+nav{
+  background-color: #333;
+  width: 100%;
+}
+
+nav a{
+  color: white;
+}
+
+nav ul{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 16px;
+}
+
+nav li{
+  font-size: 0.875rem;
+  padding:  10px 60px 10px 0;
+}
+
+#pick_up{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 150px;
+  padding-bottom: 60px;
+}
+
+#pick_up article{
+  width: 32%;
+}
+
+#pick_up .article_title{
+  font-size: 1rem;
+  margin: 10px 0 15px 0;
+}
+
+.center{
+  width: 1200px;
+  text-align: center;
+  padding:0 4%;
+  margin: 0 auto;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+}
+
+main {
+  width: 65%;
+}
+main article {
+  margin-bottom: 80px;
+}
+main .article-title {
+  font-size: 1.5rem;
+  margin: 10px 0 15px 0;
+}
+main ul {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+main li {
+  font-size: 0.875rem;
+  margin-right: 20px;
+}
+main .text {
+  padding: 10px 40px 30px 40px;
+}
+
+
+
+.sideber{
+  width: 30%;
+  padding: 20px;
+}
+
+.sidebar .side-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.author {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.author img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.author .profile {
+  font-size: 0.875rem;
+  text-align: left;
+}
+.ranking {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.ranking article {
+  margin-bottom: 30px;
+}
+.ranking .article-title {
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: left;
+}
+.archive {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.archive ul {
+  border-bottom: solid  1px #777;
+}
+.archive li {
+  font-size: 0.875rem;
+  border-top: solid  1px #777;
+  padding: 20px;
+  text-align: left;
+}
+
+
+.overview{
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.overview .container{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-size: 14px;
+}
+
+.overview_item{
+  width: 30%;
+}
+
+.overview_title{
+  margin-bottom: 30px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.about_list {
+  margin: 20px 0;
+}
+
+.overview p{
+  text-align: left;
+}
+
+.about_list li {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.about_list .arrow {
+  position: relative;
+  display: inline-block;
+  padding-left: 12px;
+  color: #333;
+}
+
+.menu_list{
+  border-bottom: solid 1px #777;
+}
+
+.menu_list li{
+ padding: 15px;
+ border-top: solid 1px #777;
+ text-align: left;
+}
+
+.twitter_list{
+ margin: 20px 0;
+}
+
+.footer{
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.footer p{
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+
+@media screen and (min-width: 768px) {
+
+ .header{
+   width: 100%;
+ }
+
+  .header .site-title {
+    padding: 20px 16px;
+  }
+  .nav {
+    /* 横スクロールを表示 */
+   overflow-x: scroll;
+  }
+
+  /*-------------------------------------------
+  pickup
+  -------------------------------------------*/
+  .pick_up {
+    flex-direction: column;
+    padding-top: 140px;
+    width: 100%;
+  }
+  .pick_up article {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  /*-------------------------------------------
+  container
+  -------------------------------------------*/
+  .center {
+    flex-direction: column;
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+  }
+
+  /*-------------------------------------------
+  aside
+  -------------------------------------------*/
+  .sidebar {
+    width: 100%;
+    padding: 0;
+  }
+
+  /*-------------------------------------------
+  footer
+  -------------------------------------------*/
+  .overview .container {
+    width: 100%;
+  }
+  .overview_item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+
